@@ -1,16 +1,40 @@
-# React + Vite
+# Projet réalisé dans le cadre de RT0907(Programmation cloud )
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Ce projet met en place une solution complète de vote basée sur une architecture **Serverless AWS**, avec un frontend React déployé sur Vercel.
 
-Currently, two official plugins are available:
+# Compte de test utilisateur : test2@gmail.com , mdp : 5dNNef@yALYTUQK
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Compte de test utilisateur admin : admin@admin.com , mdp : 5dNNef@yALYTUQK
 
-## React Compiler
+# Le backend a été réalisé en AWS Lambda,
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Le frontend :
 
-## Expanding the ESLint configuration
+https://vote-self.vercel.app
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# L’application repose sur les services suivants :
+
+- **AWS Lambda** – Fonctions serverless
+- **Amazon API Gateway (HTTP API)** – Exposition des endpoints REST
+- **Amazon DynamoDB** – Stockage NoSQL
+- **Amazon S3** – Stockage des documents de campagne
+- **Amazon Cognito** – Authentification & gestion des rôles
+- **Terraform** – Infrastructure as Code
+- **React (Vite)** – Frontend
+- **Vercel** – Déploiement frontend
+
+# Fonctionnalités
+
+## Utilisateur
+
+- Authentification sécurisée via Cognito
+- Consultation des candidats
+- Vote (unicité garantie côté backend)
+- Visualisation des résultats (diagramme circulaire)
+- Consultation des documents de campagne
+
+## Administrateur
+
+- Ajout de candidat
+- Dépôt de document de campagne
+- Accès protégé via groupe Cognito `admin`

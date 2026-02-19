@@ -76,7 +76,7 @@ export default function AuthenticatedApp({ user, signOut }) {
         </div>
 
         <p>
-          Connecté en tant que : <strong>{user?.username}</strong>
+          Connecté en tant que : <strong>{user?.signInDetails?.loginId || user?.attributes?.email || user?.username}</strong>
         </p>
 
         <hr />
@@ -107,6 +107,6 @@ export default function AuthenticatedApp({ user, signOut }) {
           </>
         )}
       </div>
-    </div>
+    </div >
   );
 }
