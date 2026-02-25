@@ -30,7 +30,7 @@ export default function AdminCandidats( { onCandidatAdded } ) {
       const data = await res.json();
       
       if (res.ok) {
-        setMessage(" Candidat ajouté avec succès");
+        setMessage(" Candidat ajouté avec succès !");
         setIdCandidat("");
         if (onCandidatAdded){
           await onCandidatAdded();
